@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "issue": "PORTFOLIO — 2026",
+    "edition": "EDITION 2026 // INDIA",
+    "ticker_top": "VOL. I — BACKEND ARCHITECTURE — DISTRIBUTED SYSTEMS — RUST — GOLANG — HIGH-THROUGHPUT — ZERO-LATENCY — ",
+    "ticker_bottom": "— THE ARCHITECTURE MUST NOT FAIL — FORM FOLLOWS FUNCTION — NO BLOAT, ONLY THROUGHPUT — "
+  },
+  "hero": {
+    "headline_1": "Structural",
+    "headline_2": "Integrity.",
+    "body": "Polyglot Systems Programmer specializing in high-throughput, memory-safe backend architectures. Building blazing-fast frameworks, distributed AI pipelines, and the unyielding foundations of the modern web.",
+    "stats": [
+      {
+        "num": "190K+",
+        "label": "REQ/SEC"
+      },
+      {
+        "num": "3,081",
+        "label": "YT SUBS"
+      },
+      {
+        "num": "5K+",
+        "label": "MEDIUM/MO"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "num": "01",
+      "title": "Blaze",
+      "subtitle": "190K+ REQ/SEC GO WEB FRAMEWORK",
+      "tags": [
+        "GOLANG",
+        "FastHTTP",
+        "HTTP/2",
+        "2025"
+      ],
+      "desc": "Blazing-fast Go web framework with intelligent caching, WebSockets, TLS, and zero-allocation routing. Outperforms established Go libraries in TechEmpower benchmarks.",
+      "accent": "red",
+      "href": "https://github.com/AarambhDevHub/blaze"
+    },
+    {
+      "num": "02",
+      "title": "Ignitia",
+      "subtitle": "155K+ REQ/SEC RUST WEB FRAMEWORK",
+      "tags": [
+        "RUST",
+        "Tokio",
+        "Axum",
+        "2024"
+      ],
+      "desc": "Blazing-fast Rust framework with radix routing, zero-copy optimization, DashMap concurrency, WebSocket integration, and multipart parsing.",
+      "accent": "blue",
+      "href": "https://github.com/AarambhDevHub/ignitia"
+    },
+    {
+      "num": "03",
+      "title": "Pingora WAF",
+      "subtitle": "HIGH-PERFORMANCE WEB APPLICATION FIREWALL",
+      "tags": [
+        "RUST",
+        "Cloudflare Pingora",
+        "2024"
+      ],
+      "desc": "WAF built on Cloudflare's Pingora. Blocks SQLi, XSS, and path traversal at 15K+ req/sec with <7ms latency. 3× faster than ModSecurity. Prometheus metrics built-in.",
+      "accent": "yellow",
+      "href": "https://github.com/AarambhDevHub/pingora-waf"
+    },
+    {
+      "num": "04",
+      "title": "Vani AI",
+      "subtitle": "MULTILINGUAL AI VOICE ASSISTANT WITH VISION",
+      "tags": [
+        "PYTHON",
+        "Llama",
+        "OpenCV",
+        "2024"
+      ],
+      "desc": "Local-first multilingual AI assistant integrating Faster-Whisper STT, Meta Llama for NLP, and Moondream vision model for real-time image evaluation.",
+      "accent": "black",
+      "href": "https://github.com/AarambhDevHub/vani-assistant"
+    },
+    {
+      "num": "05",
+      "title": "Multi-Cam",
+      "subtitle": "REAL-TIME MULTI-CAMERA FACE TRACKER",
+      "tags": [
+        "PYTHON",
+        "InsightFace",
+        "RTSP",
+        "2023"
+      ],
+      "desc": "Computer vision engine tracking 4+ webcams/RTSP streams at 30 FPS. InsightFace for age/gender demographics. Automated Telegram webhook alerts for unknown entities.",
+      "accent": "red",
+      "href": "https://github.com/AarambhDevHub/multi-cam-face-tracker"
+    },
+    {
+      "num": "06",
+      "title": "Typewriter",
+      "subtitle": "TERMINAL TYPEWRITER EMULATOR IN RUST",
+      "tags": [
+        "RUST",
+        "CLI",
+        "TUI",
+        "2025"
+      ],
+      "desc": "A terminal typewriter experience — mechanical click sounds, keystroke animations, and distraction-free writing mode. Built entirely in Rust.",
+      "accent": "blue",
+      "href": "https://github.com/aarambh-darshan/typewriter"
+    }
+  ],
+  "experience": [
+    {
+      "years": "2024 — PRES",
+      "role": "Content Creator & Developer Educator",
+      "org": "Aarambh Dev Hub",
+      "desc": "Producing Rust, Go, and AI tutorials reaching 2,991 subscribers and 5,000+ monthly Medium readers. Leading a 500+ member developer Discord with architectural reviews and system design mentorship."
+    },
+    {
+      "years": "2022 — 2023",
+      "role": "Full-Stack Backend Engineer",
+      "org": "Technobot System",
+      "desc": "Optimized microservice architectures cutting API latency by 40%. Integrated 5+ async REST APIs across Java/Node.js. Engineered a Bio Link platform supporting 1,000+ active users within 3 months."
+    },
+    {
+      "years": "2020 — PRES",
+      "role": "Open Source Engineer",
+      "org": "AarambhDevHub",
+      "desc": "Built production-grade open-source frameworks: Blaze (190K RPS), Ignitia (155K RPS), Pingora WAF, Mini-Blockchain, Mini-Kafka, WsForge, and 20+ more systems-level projects."
+    }
+  ],
+  "skills": {
+    "buckets": [
+      {
+        "title": "LANGUAGES",
+        "color": "blue",
+        "list": "Rust, Go, Python, Java, TypeScript, C++"
+      },
+      {
+        "title": "FRAMEWORKS",
+        "color": "none",
+        "list": "Axum, Actix, FastHTTP, Tokio, Express, FastAPI, Next.js, SvelteKit"
+      },
+      {
+        "title": "DATABASES",
+        "color": "yellow",
+        "list": "PostgreSQL, MongoDB, MySQL, Redis, SQLx, DynamoDB"
+      },
+      {
+        "title": "TOOLS & CLOUD",
+        "color": "none",
+        "list": "Docker, Kubernetes, AWS, GCP, Linux, NGINX, CI/CD, Git"
+      }
+    ],
+    "marquee": "RUST / GO / PYTHON / TS / REACT / SQL / DOCKER / K8s / "
+  },
+  "recognition": [
+    {
+      "org": "GITHUB",
+      "award": "rust-backend-axum — 109 Stars"
+    },
+    {
+      "org": "GITHUB",
+      "award": "pingora-waf — 20 Stars + 3 Forks"
+    },
+    {
+      "org": "YOUTUBE",
+      "award": "2,991 Subscribers // Aarambh Dev Hub"
+    },
+    {
+      "org": "MEDIUM",
+      "award": "5,000+ Monthly Readers // Technical Writing"
+    }
+  ],
+  "articles": [
+    {
+      "kind": "ARTICLE",
+      "title": "SHOULD DEVELOPERS SWITCH FROM RUST TO PYTHON FOR AI IN 2025?",
+      "href": "https://aarambhdevhub.medium.com/should-developers-switch-from-rust-to-python-for-ai-in-2025-practical-guide-3d767f0c264f"
+    },
+    {
+      "kind": "ARTICLE",
+      "title": "REAL-TIME MULTI-CAMERA FACE TRACKER WITH AI",
+      "href": "https://aarambhdevhub.medium.com/real-time-multi-camera-face-tracker-with-ai-build-your-own-smart-surveillance-system-3ed6b58bf3e5"
+    },
+    {
+      "kind": "ARTICLE",
+      "title": "ACTIX VS. AXUM: A DEEP DIVE INTO RUST'S PREMIER WEB FRAMEWORKS",
+      "href": "https://aarambhdevhub.medium.com/actix-vs-axum-a-deep-dive-into-rusts-premier-web-frameworks-737f3de52fe5"
+    },
+    {
+      "kind": "YOUTUBE",
+      "title": "MASTER RUST BACKEND WITH AXUM: FULL-STACK GUIDE FOR AUTH, POSTGRESQL & EMAIL VERIFICATION",
+      "href": "https://youtu.be/M0wi7V1rP4Y"
+    },
+    {
+      "kind": "YOUTUBE",
+      "title": "BUILD A SECURE FILE SHARING APP WITH RUST, AXUM, NEXT.JS & SHADCN | END-TO-END ENCRYPTION",
+      "href": "https://youtu.be/t5w2dauFmhM"
+    },
+    {
+      "kind": "YOUTUBE",
+      "title": "COMPLETE AXUM 0.8 TUTORIAL: BUILD PRODUCTION REST APIS IN RUST (2026 FULL COURSE)",
+      "href": "https://youtu.be/Ka7mRKsTCyE"
+    }
+  ],
+  "contact": {
+    "email": "darshanvichhi111@gmail.com",
+    "github_org": "https://github.com/AarambhDevHub",
+    "github_personal": "https://github.com/aarambh-darshan",
+    "linkedin": "https://linkedin.com/in/darshan-vichhi-rust-developer",
+    "youtube": "https://youtube.com/@AarambhDevHub",
+    "medium": "https://aarambhdevhub.medium.com",
+    "discord": "https://discord.gg/HDth6PfCnp",
+    "buymeacoffee": "https://buymeacoffee.com/aarambhdevhub"
+  },
+  "footer": {
+    "left": "© 2026 DARSHAN VICHHI",
+    "right": "MANIFESTO EDITION"
+  }
+}

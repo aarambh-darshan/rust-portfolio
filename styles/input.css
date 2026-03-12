@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@source "../src";
+
+@theme {
+  --color-bg: #f5f0e8;
+  --color-bg-dark: #0a0a0a;
+  --color-text: #0a0a0a;
+  --color-text-inv: #f5f0e8;
+  --color-muted: #8a8577;
+  --color-border: #0a0a0a;
+  --color-red: #d42b2b;
+  --color-blue: #1a3dc4;
+  --color-yellow: #f5c518;
+  --color-offwhite: #f5f0e8;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Space Grotesk', sans-serif;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  body.is-loading {
+    overflow: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: none;
+  }
+
+  ::selection {
+    background: var(--color-red);
+    color: #fff;
+  }
+
+  *, *::before, *::after {
+    border-color: var(--color-border);
+  }
+}
+
+@import "./portfolio.css";

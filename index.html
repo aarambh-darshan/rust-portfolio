@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>DARSHAN VICHHI [MANIFESTO] — Systems Engineer & Open Source Developer</title>
+  <meta name="title" content="DARSHAN VICHHI [MANIFESTO] — Systems Engineer & Open Source Developer" />
+  <meta name="description"
+    content="Darshan Vichhi — Polyglot Systems Programmer specializing in high-throughput, memory-safe backend architectures in Rust and Go. Creator of Blaze and Ignitia frameworks." />
+  <meta name="keywords"
+    content="Darshan Vichhi, Systems Engineer, Software Engineer, Rust Developer, Go Developer, AI Backend, Pingora WAF, TechEmpower, Open Source, High-Throughput Architecture" />
+  <meta name="author" content="Darshan Vichhi" />
+  <link rel="canonical" href="https://darshanvichhi.dev" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23ff0000%22/></svg>" />
+  <link data-trunk rel="copy-file" href="public/og-image.png" />
+  <link data-trunk rel="copy-file" href="public/robots.txt" />
+  <link data-trunk rel="copy-file" href="public/sitemap.xml" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://darshanvichhi.dev" />
+  <meta property="og:title" content="DARSHAN VICHHI [MANIFESTO] — Systems Engineer & Open Source Developer" />
+  <meta property="og:description"
+    content="Polyglot Systems Programmer specializing in high-throughput, memory-safe backend architectures. Building blazing-fast frameworks and the unyielding foundations of the modern web." />
+  <meta property="og:image" content="https://darshanvichhi.dev/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://darshanvichhi.dev" />
+  <meta property="twitter:title" content="DARSHAN VICHHI [MANIFESTO] — Systems Engineer & Open Source Developer" />
+  <meta property="twitter:description"
+    content="Polyglot Systems Programmer specializing in high-throughput, memory-safe backend architectures. Building blazing-fast frameworks and the unyielding foundations of the modern web." />
+  <meta property="twitter:image" content="https://darshanvichhi.dev/og-image.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Darshan Vichhi",
+      "jobTitle": "Systems Engineer",
+      "url": "https://darshanvichhi.dev",
+      "sameAs": [
+        "https://github.com/aarambh-darshan",
+        "https://github.com/AarambhDevHub",
+        "https://linkedin.com/in/darshan-vichhi-rust-developer",
+        "https://youtube.com/@AarambhDevHub",
+        "https://aarambhdevhub.medium.com"
+      ],
+      "knowsAbout": ["Rust", "Go", "Python", "High-Throughput Architecure", "Pingora", "WebAssembly"]
+    }
+  </script>
+
+  <!-- Fonts: Playfair Display + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Portfolio CSS (exact original) -->
+  <link data-trunk rel="css" href="styles/tailwind-output.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+
+  <!-- Bootstrap: register GSAP plugins. Lenis + animations are triggered from Rust. -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+  </script>
+
+  <!-- Wasm entry point -->
+  <link data-trunk rel="rust" data-bin="leptos-portfolio" data-wasm-opt="z" />
+</head>
+
+<body class="is-loading">
+  <!-- Blend-mode cursor -->
+  <div id="blend-cursor">
+    <div class="cur-dot"></div>
+    <div class="cur-circle"></div>
+  </div>
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+</body>
+
+</html>
