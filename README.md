@@ -28,7 +28,7 @@ This project compiles into raw WebAssembly and static CSS/HTML. It requires abso
 *   **Framework preset:** `None`
 *   **Build command:** 
     ```bash
-    curl -sLO https://github.com/trunk-rs/trunk/releases/download/v0.21.4/trunk-x86_64-unknown-linux-gnu.tar.gz && tar -xzf trunk-x86_64-unknown-linux-gnu.tar.gz && rustup target add wasm32-unknown-unknown && ./trunk build --release
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . "$HOME/.cargo/env" && curl -sLO https://github.com/trunk-rs/trunk/releases/download/v0.21.4/trunk-x86_64-unknown-linux-gnu.tar.gz && tar -xzf trunk-x86_64-unknown-linux-gnu.tar.gz && rustup target add wasm32-unknown-unknown && ./trunk build --release
     ```
 *   **Build output directory:** `dist`
 
