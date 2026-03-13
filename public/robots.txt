@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://darshanvichhi.pages.dev/sitemap.xml
+Sitemap: https://aarambh-darshan.github.io/rust-portfolio/sitemap.xml

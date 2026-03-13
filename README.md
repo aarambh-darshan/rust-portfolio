@@ -12,30 +12,70 @@ A brutalist, high-performance, single-page portfolio built from the ground up to
 - **Animations:** GSAP (Timeline & ScrollTrigger) + Lenis Smooth Scroll
 - **Toolchain:** Trunk
 
-## Zero-Latency Static Deployment (Cloudflare Pages)
+## Zero-Latency Static Deployment (GitHub Pages)
 
-This project compiles into raw WebAssembly and static CSS/HTML. It requires absolutely no backend infrastructure, making it perfect for global Edge node distribution via Cloudflare Pages.
+This project compiles into raw WebAssembly and static CSS/HTML. It requires absolutely no backend infrastructure, making it perfect for free hosting on GitHub Pages via Actions.
 
 ### How to Deploy:
 
-1. Push this code to a repository (`aarambh-darshan/rust-portfolio`) on GitHub (Public or Private).
-2. Log into the Cloudflare Dashboard -> **Workers & Pages**.
-3. Click **Create Application** -> **Pages** -> **Connect to Git**.
-4. Select your `rust-portfolio` repository.
-5. In the "Set up builds and deployments" section, configure the following exactly:
+1. Push this code to a repository (`aarambh-darshan/rust-portfolio`) on GitHub.
+2. Go to your repository **Settings** > **Pages**.
+3. Under **Build and deployment**, change the **Source** to **GitHub Actions**.
+4. Create a new file in your repository at `.github/workflows/deploy.yml` with the following content to automatically build and deploy your WebAssembly portfolio:
 
-**Build Settings:**
-*   **Framework preset:** `None`
-*   **Build command:** 
-    ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . "$HOME/.cargo/env" && curl -sLO https://github.com/trunk-rs/trunk/releases/download/v0.21.4/trunk-x86_64-unknown-linux-gnu.tar.gz && tar -xzf trunk-x86_64-unknown-linux-gnu.tar.gz && rustup target add wasm32-unknown-unknown && ./trunk build --release
-    ```
-*   **Build output directory:** `dist`
+```yaml
+name: Deploy Trunk Build to GitHub Pages
 
-### Explanation of the Build Command
+on:
+  push:
+    branches: ["main"]
 
-Because Cloudflare Pages runners are pristine Ubuntu containers, they have Rust installed (`rustc`, `cargo`), but they lack the `wasm32-unknown-unknown` target and the `trunk` CLI compiler. 
-The command above dynamically fetches the latest pre-compiled `trunk` binary, extracts it, adds the WebAssembly target to the Rust toolchain, and finally executes `./trunk build --release` natively on the runner to generate the `dist` payload without bloating build minutes.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Install Trunk
+        uses: jetli/trunk-action@v0.5.0
+        with:
+          version: 'latest'
+
+      - name: Build
+        run: trunk build --release --public-url /rust-portfolio/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Once this file is committed to your `main` branch, GitHub will automatically build your site and host it at `https://aarambh-darshan.github.io/rust-portfolio/`.
 
 ## Local Development
 
