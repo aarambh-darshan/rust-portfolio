@@ -33,6 +33,9 @@ jobs:
         with:
           version: 'latest'
 
+      - name: Install Tailwind CSS
+        run: npm install -g tailwindcss @tailwindcss/cli
+
       - name: Build
         run: trunk build --release --public-url /rust-portfolio/
 
