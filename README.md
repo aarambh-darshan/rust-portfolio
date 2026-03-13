@@ -90,11 +90,19 @@ cargo install trunk
 trunk serve --open
 ```
 
-## Content Management (Zero-DB)
+## 🛠️ Forking & Customizing (Open Source)
 
-All content, statistics, and project links are strictly managed via `content.json`. 
-During compile time (`trunk build`), Leptos parses this JSON file and embeds the statically typed structures directly into the binary overhead.
+This portfolio is open source and free to use! 
 
-## License
+Because the entire architecture is statically compiled, **you do not need to touch any Rust code to customize this site for yourself.**
 
-Personal Project. All Rights Reserved.
+1. **Fork** this repository.
+2. **Edit `content.json`:** Open the `content.json` file in the root directory. All of the text, projects, skills, and links on the website are pulled directly from this file at compile time. Just replace my data with yours!
+3. **Change the SEO Data:** Open `index.html` and swap out the meta tags, `<title>`, and descriptions with your own information.
+4. **Deploy:** Enable GitHub Pages in your repository settings (Settings > Pages > Source: GitHub Actions), and GitHub will automatically build and publish your customized portfolio.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE). 
+
+You are free to fork it, modify it, use it for your own portfolio, and distribute it. If you build something cool with it, I'd love to see it!
