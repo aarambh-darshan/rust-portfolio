@@ -1,11 +1,21 @@
+// src/components/ticker.rs — Darshan Vichhi Portfolio × Leptos 0.7
+//
+// ── UI COMPONENT ─────────────────────────────────────────────────────────────
+// Fully encapsulated component. Data is injected statically at compile time.
+// ─────────────────────────────────────────────────────────────────────────────
+
 use leptos::prelude::*;
+use crate::content;
 
 #[component]
 pub fn Ticker(
-    #[prop(into)] text: String,
     #[prop(default = false)] reverse: bool,
 ) -> impl IntoView {
     let track_class = if reverse { "ticker-track reverse" } else { "ticker-track" };
+    
+    let meta = content::load().meta;
+    let text = if reverse { meta.ticker_bottom } else { meta.ticker_top };
+    
     let t1 = text.clone();
     let t2 = text.clone();
 

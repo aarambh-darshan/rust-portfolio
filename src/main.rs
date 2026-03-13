@@ -32,8 +32,6 @@ fn App() -> impl IntoView {
     // Provide Meta Context for dynamic SEO updates
     provide_meta_context();
 
-    // Parse content.json (embedded at compile time)
-    let c = content::load();
 
     // Boot animations after first render (~= DOMContentLoaded)
     Effect::new(|_| {
@@ -59,15 +57,15 @@ fn App() -> impl IntoView {
         <Splash />
 
         <main id="smooth-wrapper">
-            <Header meta=c.meta.clone() />
+            <Header />
 
-            <Ticker text=c.meta.ticker_top.clone() />
+            <Ticker />
 
             <Hero />
 
             <Projects />
 
-            <Ticker text=c.meta.ticker_bottom reverse=true />
+            <Ticker reverse=true />
 
             <Philosophy />
 

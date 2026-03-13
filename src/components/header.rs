@@ -1,8 +1,15 @@
+// src/components/header.rs — Darshan Vichhi Portfolio × Leptos 0.7
+//
+// ── UI COMPONENT ─────────────────────────────────────────────────────────────
+// Fully encapsulated component. Data is injected statically at compile time.
+// ─────────────────────────────────────────────────────────────────────────────
+
 use leptos::prelude::*;
-use crate::{content::Meta, gsap::lenis_scroll_to};
+use crate::{content, gsap::lenis_scroll_to};
 
 #[component]
-pub fn Header(meta: Meta) -> impl IntoView {
+pub fn Header() -> impl IntoView {
+    let meta = content::load().meta;
     let scroll = |sel: &'static str| move |_: web_sys::MouseEvent| lenis_scroll_to(sel);
     view! {
         <header class="ed-header sticky top-0 z-100 bg-bg grid grid-cols-2 md:grid-cols-12">
